@@ -28,17 +28,17 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Setup Chrome
-      uses: browser-actions/setup-chrome@v1
-    - name: Check Chrome version
+      uses: browser-actions/setup-chrome@v2
+    - name: Check chrome version
       run: chrome --version
     - name: Install ChromeDriver
       run: |
         CHROMEDRIVER_VERSION=$(curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE)
+        curl -L "chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip" -o chromedriver.zip
         unzip chromedriver.zip
         sudo mv chromedriver /usr/local/bin
         sudo chmod +x /usr/local/bin/chromedriver
         ls -l
-
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
