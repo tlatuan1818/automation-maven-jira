@@ -31,12 +31,13 @@ jobs:
       uses: browser-actions/setup-chrome@v1
     - name: Check Chrome version
       run: chrome --version
-    #- name: Install ChromeDriver
-     # run: |
-      #  CHROMEDRIVER_VERSION=$(curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE)
-      #  unzip chromedriver.zip
-      #  sudo mv chromedriver /usr/local/bin
-      #  sudo chmod +x /usr/local/bin/chromedriver
+    - name: Install ChromeDriver
+      run: |
+        CHROMEDRIVER_VERSION=$(curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE)
+        unzip chromedriver.zip
+        sudo mv chromedriver /usr/local/bin
+        sudo chmod +x /usr/local/bin/chromedriver
+        ls -l
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml
