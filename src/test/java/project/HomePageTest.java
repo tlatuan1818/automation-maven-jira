@@ -38,7 +38,7 @@ public class HomePageTest {
 
         public void setUp() throws Exception {
 
-          File chromedriverExecutable = new File( "driver/chromedriver.exe");
+          File chromedriverExecutable = new File( "/usr/local/bin/chromedriver/chromedriver.exe");
           System.setProperty("web driver.chrome.driver", chromedriverExecutable.getAbsolutePath());
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--headless");
