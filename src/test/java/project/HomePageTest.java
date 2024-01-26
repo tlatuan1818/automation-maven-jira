@@ -38,14 +38,13 @@ public class HomePageTest {
 
         public void setUp() throws Exception {
 
-          // File chromedriverExecutable = new File( "driver/chromedriver.exe");
-//
-            //System.setProperty("web driver.chrome.driver", chromedriverExecutable.getAbsolutePath());
+          File chromedriverExecutable = new File( "driver/chromedriver.exe");
+          System.setProperty("web driver.chrome.driver", chromedriverExecutable.getAbsolutePath());
 
             driver = new ChromeDriver();
             baseUrl = "https://www.browserstack.com/";
             driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-            driver.manage().window().maximize();
+
         }
 
 
