@@ -38,22 +38,12 @@ public class HomePageTest {
 
         public void setUp() throws Exception {
 
-//            File chromedriverExecutable = new File( "driver/chromedriver.exe");
+          // File chromedriverExecutable = new File( "driver/chromedriver.exe");
 //
-//            System.setProperty("web driver.chrome.driver", chromedriverExecutable.getAbsolutePath());
+            //System.setProperty("web driver.chrome.driver", chromedriverExecutable.getAbsolutePath());
 
             driver = new ChromeDriver();
-            ChromeOptions options = new ChromeOptions();
-
-            options.addArguments("--no-sandbox");
-
-            options.addArguments("--disable-dev-shm-usage");
-
-            options.addArguments("--headless");
-
-            driver = new ChromeDriver(options);
             baseUrl = "https://www.browserstack.com/";
-
             driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
             driver.manage().window().maximize();
         }
