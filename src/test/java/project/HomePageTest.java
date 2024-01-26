@@ -8,6 +8,7 @@ import java.io.File;
 
 import java.util.concurrent.TimeUnit;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 
 import org.openqa.selenium.WebDriver;
@@ -38,8 +39,7 @@ public class HomePageTest {
 
         public void setUp() throws Exception {
 
-          File chromedriverExecutable = new File( "/usr/local/bin/chromedriver/chromedriver.exe");
-          System.setProperty("web driver.chrome.driver", chromedriverExecutable.getAbsolutePath());
+            WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--headless");
             driver = new ChromeDriver();
