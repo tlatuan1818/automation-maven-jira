@@ -40,7 +40,8 @@ public class HomePageTest {
 
           File chromedriverExecutable = new File( "driver/chromedriver.exe");
           System.setProperty("web driver.chrome.driver", chromedriverExecutable.getAbsolutePath());
-
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--headless");
             driver = new ChromeDriver();
             baseUrl = "https://www.browserstack.com/";
             driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
