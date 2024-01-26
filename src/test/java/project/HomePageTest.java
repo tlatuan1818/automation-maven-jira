@@ -16,6 +16,7 @@ import org.openqa.selenium.WebElement;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
 
 import org.testng.annotations.BeforeClass;
@@ -42,11 +43,19 @@ public class HomePageTest {
 //            System.setProperty("web driver.chrome.driver", chromedriverExecutable.getAbsolutePath());
 
             driver = new ChromeDriver();
+            ChromeOptions options = new ChromeOptions();
 
+            options.addArguments("--no-sandbox");
+
+            options.addArguments("--disable-dev-shm-usage");
+
+            options.addArguments("--headless");
+
+            driver = new ChromeDriver(options);
             baseUrl = "https://www.browserstack.com/";
-            driver.navigate().to(baseUrl);
-            driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
+            driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+            driver.manage().window().maximize();
         }
 
 
