@@ -34,7 +34,7 @@ public class TestListener implements ITestListener {
 
             JiraServiceProvider JiraServiceProvider = new JiraServiceProvider("https://tuan1111.atlassian.net",
 
-                    "tramleanhtuan1111@gmail.com", "ATATT3xFfGF0cLKisSftl8DaUX-fLLeIx9xiuOGtLdPFstQX7crVLhiYowqObajYm-kRLKB3RN_FOm08sMnZWui3mFTZdSfUT47pdLy7MdrJpLVFIuKxUt0zGSkMgUeW7WKImIVwiBHxoC6S6NHyXy55QFg4OHURcH5fxkuW0-jK3032ObaYvL0=ADEF21C2", "ATM");
+                    "tramleanhtuan1111@gmail.com", "ATATT3xFfGF0Q5np4Mti8kBAOfUPG3iQwfIc52f6cRsnsQiiJL7NrWDRuYOut7epQTKPAJVUnUMfMuKEHx4YKlvx0V8rRQUUWt1hy8hlSd1WjxEkiDCO6UyCt-AGoFRIjMnXr45mO8kdahjptaueC4Oc4i30xwILbgDyaoXwo_JcgpF2JAvzNPo=0E10F2DA", "ATM");
 
 
 
